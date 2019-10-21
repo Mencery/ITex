@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <script>
+        var  U = [1,2,3,4,5,6,7,8,9,10]; 
+            var A = [1,2,5,6,8];
+            var B = [3,4,5,6,9,7];  // ints = 5,6
+            var C = [4,5,7,9,10];  
+
+            function num(){
+            for( let i = 1;  i<= 10;  i++){
+                if(i%2 == 0){
+                    document.writeln(i);
+                }
+                
+            
+            }
+            }
+            
+            
+            num();
+           
+            
+            function union(X, Y){
+              
+
+                let Z= [];
+              for (let i = 0; i < X.length; i++){
+                  Z.push(X[i]);
+              }
+    
+              
+               for(let i = 0; i< Y.length;i++ ){
+                   if(!isHas(Z,Y[i])){
+                    Z.push(Y[i]);
+                   }
+               }
+               
+                
+                return Z;
+
+
+            }
+
+            function isHas( array, element){
+                
+                for(let i = 0; i<array.length; i++){
+                     
+                    if(array[i] == element){
+                     
+                        return true
+                    }
+
+                }
+                return false;
+
+            }
+        
+            
+            
+            function intersection(X,Y){
+                let Z = [];
+                for(var i = 0;i<Y.length;i++){
+                    if (isHas (X,Y[i])){
+                        Z.push (Y[i]);
+                    }
+                    
+                }
+                return Z;
+                
+
+            }
+           
+          
+
+ function difference(X, Y){
+     let Z = [];
+     for(var i = 0; i<X.length;i++){
+         if (!isHas(Y, X[i])){
+             Z.push(X[i]);
+         }   
+           }
+           
+     return Z;
+ }
+
+
+ 
+ function compliment(X){
+   
+   let Z = [];
+    for(var i = 0; i<U.length;i++){
+        if (!isHas(X, U[i])){
+            Z.push(U[i]);
+        }   
+          }
+   
+    return Z;
+}
+document.write("U: "+ U);
+ document.write("<br>");
+ document.write("A: "+ A);
+ document.write("<br>");
+ document.write("B: "+ B);
+ document.write("<br>");
+ document.write("C: "+ C);
+ document.write("<br>");
+ document.write("Union A and B: "+union(A, B));
+ document.write("<br>");
+document.write("Intersection A and B: " +intersection(A, B));
+document.write("<br>");
+ document.write("difference B and C: " + difference(B, C));
+document.write("<br>");
+ document.writeln("compliment C: "+ compliment(C));
+ 
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
