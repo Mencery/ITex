@@ -1,0 +1,22 @@
+
+      .flexbox-container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+        height: 100px;
+        width: 150px;
+        background: rgb(192, 191, 191);
+       
+      
+
+    }
+    .flexbox-element{
+        
+        background: blue;
+        padding: 15px;
+        margin: 5px;
+      
+        
+    }

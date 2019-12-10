@@ -1,0 +1,62 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="flexbox.css">
+<style>
+   #list{
+       float: left;
+
+   }
+  .flexbox-container{
+      position: absolute;
+  }
+    ul[type="SDdisc"]{
+       
+        list-style-image: url(SD10x10.png);
+        
+
+    }
+  
+</style>
+    </head>
+    <body>
+        <div id="list">
+        <dl>
+            <dd> КИУ: </dd>
+    
+            <dd>
+                <ol>
+
+                    <li>КСМ:
+                        <ul type="SDdisc">
+                            <li>КИУКИ-17-1</li>
+                            <li>КИУКИ-17-2</li>
+                        </ul>
+                    </li>
+                    <li>СП:
+                        <ul type="SDdisc">
+                            <li>КИУКИ-17-3</li>
+                            <li>КИУКИ-17-4</li>
+                            <li>КИУКИ-17-5</li>
+                        </ul>
+                    </li>
+                    <li>СКС:
+                        <ul type="SDdisc">
+                            <li>КИУКИ-17-6</li>
+                            <li>КИУКИ-17-7</li>
+                            <li>КИУКИ-17-8</li>
+                        </ul>
+                    </li>
+                </ol>
+            </dd>
+        </dl>
+    </div>
+                <div class="flexbox-container">
+                    <div class="flexbox-element"></div>
+                    <div class="flexbox-element"></div>
+                    <div  class="flexbox-element" style="flex-grow: 1;"></div>
+                    <div class="flexbox-element"></div>
+                    <div class="flexbox-element"></div>
+                    <div class="flexbox-element"></div>
+                </div>
+    </body>
+</html>

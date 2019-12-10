@@ -1,0 +1,59 @@
+<html>
+    <head>
+            <script src="jquery-3.4.1.min.js"></script>
+<script>
+  
+     $(function(){
+    $('#submit').bind('click', function(){
+        var today = new Date();
+       // alert(today);
+       var report = '';
+            var experience = new Array();
+            for(var i = 0;i<3;i++){
+               let form =  $("#form"+i);
+               
+               
+              var hireDate = new Date($("#form"+i).children("#hire").val());
+              // alert("hire: "+hireDate);
+               experience.push(today - hireDate);
+               report += $("#form"+i).children("#surname").val()+": "+ 
+                 getYearByMilliseconds(experience[i]) +" year"+ '\n';
+               //alert("ex days: "+experience[i]/8.64e7);
+            }
+            
+            var midleExperience = 0;
+            for (var i = 0; i<3;i++){
+             midleExperience  += experience[i];
+          //   alert(i+" "+midleExperience);
+            }
+            
+            midleExperience /= 3; 
+           var midleExperienceInYear =getYearByMilliseconds(midleExperience);
+           report +="midle experience: " + midleExperienceInYear+ " year";
+           alert(report);
+            
+        
+        function getYearByMilliseconds(milliseconds){
+           return Math.round((milliseconds/3.1536e10)*10)/10;
+        }
+    });
+});
+</script>
+
+    </head>
+    <body>
+            <script> for(var i = 0;i<3;i++){
+                var form = document.createElement("form");
+                form.id ="form"+i;
+                form.innerHTML ="<label for=\"surname\">Surname</label><br>"+
+                "<input type=\"text\" id=\'surname\' pattern=\"\w+\" ><br>"+
+                "<label for=\"hire\">Hire Date</label><br>"+
+                "<input type=\"date\"  min=\"1970-01-01\" max=\"2020-01-01\" id=\'hire\' >";
+              
+              document.body.append(form);
+              
+              }
+               </script>
+<button  id = "submit"> Submit</button>
+    </body>
+</html>
