@@ -1,14 +1,15 @@
-$("#getStatistics").on("click", function () {
+$("#getStatistics").on("click", function() {
 
     var from = $("#from").val();
     var to = $("#to").val();
     if (from != "" && to != "") {
         $.ajax({
             url: "get.php",
-            method: "GET",s
-            data: { from: from, to: to },
-            success: function (data) {
+            method: "GET",
+            data: { "from": from, "to": to },
+            success: function(data) {
                 var parser = new DOMParser();
+
                 var xmlDoc = parser.parseFromString(data, "text/xml");
                 var html = "<table border='1'>";
                 for (var i = 0; i < xmlDoc.getElementsByTagName("row").length; i++) {
@@ -23,7 +24,7 @@ $("#getStatistics").on("click", function () {
                 html += "</table>";
                 $('#statistics').html(html);
             },
-            error: function () { alert("Not found"); }
+            error: function() { alert("Not found"); }
 
         });
     }

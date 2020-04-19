@@ -1,0 +1,83 @@
+body {
+    background: rgba(11, 205, 212, 0.199);
+}
+
+.inbox_msg {
+    border: 1px solid #c4c4c4;
+    clear: both;
+    overflow: hidden;
+    position: absolute;
+    padding: 18px 16px 10px;
+    left: 35%;
+    top: 35%;
+}
+
+.inbox_chat {
+    height: 550px;
+    overflow-y: scroll;
+}
+
+textarea {
+    background: #ebebeb none repeat scroll 0 0;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.mesgs {
+    float: left;
+    padding: 30px 15px 0 25px;
+    width: 60%;
+}
+
+.sent_msg p {
+    background: #05728f none repeat scroll 0 0;
+    border-radius: 3px;
+    font-size: 14px;
+    margin: 0;
+    color: #fff;
+    padding: 5px 10px 5px 12px;
+    width: 100%;
+}
+
+.sent_msg {
+    float: right;
+    width: 46%;
+}
+
+.input_msg_write input {
+    background: #ebebeb none repeat scroll 0 0;
+    border: medium none;
+    color: #2d2b2b;
+    font-size: 15px;
+    min-height: 48px;
+    width: 100%;
+}
+
+.type_msg {
+    border-top: 1px solid #c4c4c4;
+    position: relative;
+}
+
+.msg_send_btn {
+    background: #05728f none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    height: 33px;
+    position: relative;
+    left: 85%;
+}
+
+.msg_user_btn {
+    background: #05728f none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    height: 33px;
+    position: relative;
+    left: 70%;
+}

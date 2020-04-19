@@ -9,7 +9,6 @@ $to = $_GET['to'];
 $stmt->execute(array($from,$to));
 $xml_output = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 $xml_output .= "<response>\n"; 
-#$result = "<table border='1'><tr><th>login</th><th>start</th><th>finish</th><th>in_trafic</th><th>out_trafic</th></tr>";
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $xml_output .= "\t<row>\n";
     $xml_output .= "\t\t<login>" . $row['login'] . "</login>\n";
